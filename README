@@ -1,0 +1,25 @@
+
+wiiリモコン→Raspi_zero→百万な音ゲ
+みたいなツールです
+4M専用
+
+TODO 6M対応
+
+/*
+Raspi_HID_OTG
+https://www.raspberrypi.org/forums/viewtopic.php?t=222150
+Raspi_HID_OTGファイルの中身を/usr/bin/mkdeviceにコピー
+TODO: ここ書く
+*/
+
+#コンパイル
+gcc ./millionDDR.c -lxwiimote -o millionDDR
+
+#実行
+./millionDDR
+
+#引数
+arg1 どのぐらい振れば反応するかのしきい値  デフォルトは200
+arg2 振ったあとのしきい値               デフォルトは500
+arg3 振ったあとのしきい値がarg1に戻る速さ デフォルトは10
+wiiリモコンの加速度センサーの最大値は500です
